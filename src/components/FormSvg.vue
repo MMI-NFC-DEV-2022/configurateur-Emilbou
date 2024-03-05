@@ -11,15 +11,15 @@ const chaussure = ref<ChaussureSvg>({});
 
     <ul class="flex gap-1">
         <li>
-        <a href="">Profil</a>
+        <a href="#profil">Profil</a>
     </li>
         <li>
-        <a href="">Dessus</a>
+        <a href="#dessus">Dessus</a>
     </li>
 </ul>
-<div class="carrousel w-64">
-<SvgProfil class="carrousel-item w-64" v-bind="chaussure" id="profil"></SvgProfil>
-<SvgDessus class="carrousel-item w-64" v-bind="chaussure" id="dessus"></SvgDessus>
+<div class="carousel w-64">
+<SvgProfil class="carousel-item w-64" v-bind="chaussure" id="profil"></SvgProfil>
+<SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus"></SvgDessus>
 
 </div>
 
