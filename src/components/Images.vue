@@ -15,6 +15,8 @@ mousse: "bleu",
 
 <img :src="`/images/${orientation}/base.png`" alt="" class="h-auto w-full" />
 <img :src="`/images/${orientation}/bandes-${bandes}.png`" alt="" class="absolute top-0 left-0 h-auto w-full" v-if="orientation !== 'derriere'">
+<img :src="`/images/${orientation}/cuir-${cuir}.png`" alt="" class="absolute top-0 left-0 h-auto w-full" v-if="orientation !== 'derriere'">
+<img :src="`/images/${orientation}/mousse-${mousse}.png`" alt="" class="absolute top-0 left-0 h-auto w-full" v-if="orientation !== 'derriere'">
 
     </div>
 </template>

@@ -36,16 +36,23 @@ const chaussure = ref<Chaussure>({});
         </TabPanels>
 </TabGroup>
     <FormKit type="form" v-model="chaussure">
-        <FormKit 
-        name="orientation"
-        label="Orientation"
-        type="select"
-        :options="['cote', 'dessus', 'derriere']"
-        />
+   
                 
         <FormKit
                 name="bandes"
                 label="Bandes"
+                type="select"
+                :options="couleursNoms"
+              />
+        <FormKit
+                name="cuir"
+                label="Cuir"
+                type="select"
+                :options="couleursNoms"
+              />
+        <FormKit
+                name="mousse"
+                label="Mousse"
                 type="select"
                 :options="couleursNoms"
               />
