@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {ref} from "vue"
-import type { ChaussureSvg } from '@/types-svg';
+import type { Basket } from '@/types';
 import SvgProfil from '@/components/SvgProfil.vue';
 import SvgDessus from '@/components/SvgDessus.vue';
-const chaussure = ref<ChaussureSvg>({});
+const chaussure = ref<Basket>({});
 </script>
 
 <template>

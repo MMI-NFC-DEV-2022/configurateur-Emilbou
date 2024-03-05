@@ -1,4 +1,4 @@
-export interface ChaussureSvg {
+export interface Basket {
   semelle?: string;
   empeigne?: string;
   pointe?: string;
