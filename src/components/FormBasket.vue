@@ -3,7 +3,13 @@ import {ref} from "vue"
 import type { Basket } from '@/types';
 import SvgProfil from '@/components/SvgProfil.vue';
 import SvgDessus from '@/components/SvgDessus.vue';
-const chaussure = ref<Basket>({});
+
+const props = defineProps<{
+    data?: Basket;
+    id?: string;
+}>();
+
+const chaussure = ref<Basket>(props.data ?? {});
 </script>
 
 <template>
