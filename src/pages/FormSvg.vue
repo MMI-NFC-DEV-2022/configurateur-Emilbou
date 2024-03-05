@@ -23,8 +23,16 @@ const chaussure = ref<ChaussureSvg>({});
 
 </div>
 
-<FormKit type="form" v-model="chaussure">
+
+<FormKit type="form" v-model="chaussure" >
 <FormKit name="semelle" label="semelle" value="#ffffff" type="color"></FormKit>
+<FormKit name="empeigne" label="empeigne" value="#ffffff" type="color"></FormKit>
+<FormKit name="pointe" label="pointe" value="#ffffff" type="color"></FormKit>
+<FormKit name="oeillet" label="oeillet" value="#ffffff" type="color"></FormKit>
+<FormKit name="bande" label="bande" value="#ffffff" type="color"></FormKit>
+<FormKit name="languette" label="languette" value="#ffffff" type="color"></FormKit>
+<FormKit name="lacet" label="lacet" value="#ffffff" type="color"></FormKit>
+<FormKit name="trimestre" label="trimestre" value="#ffffff" type="color"></FormKit>
 
 
 
