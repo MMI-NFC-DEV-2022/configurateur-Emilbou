@@ -1,0 +1,33 @@
+<script setup lang="ts">
+import {ref} from "vue"
+import type { ChaussureSvg } from '@/types-svg';
+import SvgProfil from '@/components/SvgProfil.vue';
+import SvgDessus from '@/components/SvgDessus.vue';
+const chaussure = ref<ChaussureSvg>({});
+</script>
+
+<template>
+<div class="p-2">
+
+    <ul class="flex gap-1">
+        <li>
+        <a href="">Profil</a>
+    </li>
+        <li>
+        <a href="">Dessus</a>
+    </li>
+</ul>
+<div class="carrousel w-64">
+<SvgProfil class="carrousel-item w-64" v-bind="chaussure" id="profil"></SvgProfil>
+<SvgDessus class="carrousel-item w-64" v-bind="chaussure" id="dessus"></SvgDessus>
+
+</div>
+
+<FormKit type="form" v-model="chaussure">
+<FormKit name="semelle" label="semelle" value="#ffffff" type="color"></FormKit>
+
+
+
+</FormKit>
+</div>
+</template>
