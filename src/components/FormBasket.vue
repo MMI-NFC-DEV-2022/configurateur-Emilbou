@@ -31,14 +31,14 @@ const chaussure = ref<Basket>(props.data ?? {});
 
 
 <FormKit type="form" v-model="chaussure" >
-<FormKit name="semelle" label="semelle" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="empeigne" label="empeigne" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="pointe" label="pointe" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="oeillet" label="oeillet" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="bande" label="bande" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="languette" label="languette" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="lacet" label="lacet" value="#ffffff" type="select" :options="colors"></FormKit>
-<FormKit name="trimestre" label="trimestre" value="#ffffff" type="select" :options="colors"></FormKit>
+<FormKit name="semelle" label="semelle" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="empeigne" label="empeigne" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="pointe" label="pointe" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="oeillet" label="oeillet" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="bande" label="bande" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="languette" label="languette" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="lacet" label="lacet" value="#ffffff" type="radio" :options="colors"></FormKit>
+<FormKit name="trimestre" label="trimestre" value="#ffffff" type="radio" :options="colors"></FormKit>
 
 
 
