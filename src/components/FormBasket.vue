@@ -41,7 +41,12 @@ const chaussure = ref<Basket>(props.data ?? {});
 <FormKit name="trimestre" label="trimestre" value="#ffffff" type="radio" :options="colors"></FormKit>
 
 
+<template #label="context">
+<div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
 
+<span>{{ context.option.label }}</span>
+
+</template>
 </FormKit>
 </div>
 </template>
