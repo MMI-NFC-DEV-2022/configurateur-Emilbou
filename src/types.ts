@@ -23,3 +23,20 @@ export const colors = {
   "#800000": "Marron",
   "#808000": "Olive",
 };
+
+export const materiaux = [
+
+{
+  value: "https://picsum.photos/205/300",
+  label: "Cuir",
+},
+{
+  value: "https://picsum.photos/200/300",
+  label: "Tissu",
+},
+{
+  value: "https://picsum.photos/203/300",
+  label: "Synthétique",
+}
+
+]

@@ -4,7 +4,7 @@ export const couleursNoms: { [key in couleur]: string } = {
   bleu: "Bleu",
   vert: "Vert",
   violet: "Violet",
-  
+
 };
 
 
