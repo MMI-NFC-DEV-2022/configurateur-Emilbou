@@ -8,8 +8,4 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 globalThis.supabase = supabase
 
-const { data } = await supabase.auth.getUser()
-export const user = ref(data.user)
-supabase.auth.onAuthStateChange( (evt,session)=>{
-    user.value = session?.user ?? null
-})
+
