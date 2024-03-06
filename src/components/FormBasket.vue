@@ -5,12 +5,34 @@ import { colors } from '@/types';
 import { materiaux } from '@/types';
 import SvgProfil from '@/components/SvgProfil.vue';
 import SvgDessus from '@/components/SvgDessus.vue';
+import { supabase } from '@/supabase';
+
+async function upsertBasket(dataForm, node) {
+    const {data, error } = await supabase.from("Basket").upsert(dataForm).select('id');
+    if (error) node.setErrors([error.message])
+    else { 
+ console.log("data id :", data[0].id);
+   node.setErrors([]);
+        router.push("/edit/[id]");
+    }}
+
 const props = defineProps<{
     data?: Basket;
     id?: string;
 }>();
 
 const chaussure = ref<Basket>(props.data ?? {});
+
+if (props.id ?? false) {
+    const { data, error } = await supabase
+        .from('Basket')
+        .select('*')
+        .eq('id', props.id)
+        .single()
+    if (error) console.error(error)
+    else chaussure.value = data
+
+}
 </script>
 
 <template>
@@ -31,23 +53,10 @@ const chaussure = ref<Basket>(props.data ?? {});
 </div>
 
 
-<FormKit type="form" v-model="chaussure" >
+<FormKit type="form" v-model="chaussure" @submit="upsertBasket">
 
 
-<FormKit name="materiaux" label="materiaux" value="#ffffff" type="radio" :options="materiaux" :sections-schema="{
-    inner: { $el: null},
-    decorator: { $el: null },
-}" 
-input-class="peer sr-only"
-options-class="flex gap-4"
->
-    <template #label="context">
-    <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600" :style="{ backgroundImage: `url(${context.option.value})` }" />
 
-    <span class="sr-only">{{ context.option.label }}</span>
-
-    </template>
-</FormKit>
 <FormKit name="semelle" label="semelle" value="#ffffff" type="radio" :options="colors" :sections-schema="{
     inner: { $el: null},
     decorator: { $el: null },

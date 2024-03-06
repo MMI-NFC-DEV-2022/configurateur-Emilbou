@@ -40,11 +40,13 @@ const exemples: Basket[] = [
         <h1 class="text-2xl">Exemples de Baskets</h1>
         <div class="flex flex-wrap gap-2">
             <div class="w-64">
-                <RouterLink :to="{
+                <RouterLink
+                 v-for="exemple in exemples"
+                :to="{
                     name: '/basket/exemple/[data]',
-                    params: { data: JSON.stringify(exemples) },
+                    params: { data: JSON.stringify(exemple) },
                 }">
-                    <SvgProfil class="w-64" v-for="exemple in exemples" v-bind="exemple" />
+                    <SvgProfil class="w-64" v-bind="exemple" />
                 </RouterLink>
             </div>
         </div>

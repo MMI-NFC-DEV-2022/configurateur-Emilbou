@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import FormSvg from "../../../components/FormBasket.vue";
+import {ref} from "@vue/reactivity"
+import { supabase } from "@/supabase"
+import FormBasket from "@/components/FormBasket.vue";
+const basket = ref({})
 defineProps<{
     id: string;
 }>();
+
+
 </script>
 <template>
-    <FormSvg :id="id" />
+    <FormBasket :id="id" />
 </template>

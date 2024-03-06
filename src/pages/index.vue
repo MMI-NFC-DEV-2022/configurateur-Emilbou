@@ -5,7 +5,12 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <RouterLink to="/BasketIndex">navigation</RouterLink>
+
+<div class="text-3xl gap-20">
+  
+    <RouterLink to="/BasketIndex">navigation</RouterLink>
+    <RouterLink to="/basket/">affichage liste basket de supabase</RouterLink>
+</div>
   <main>bonjour de home</main>
   <FormBasket/>
   <FormImages/>
